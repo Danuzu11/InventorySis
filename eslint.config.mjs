@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Impeccable skill bundle (no es código del proyecto):
+    ".agents/**",
+    ".impeccable/**",
   ]),
 ]);
 

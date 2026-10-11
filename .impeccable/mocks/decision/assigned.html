@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Masa Viva — InventarioSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1440px;height:900px;overflow:hidden;background:#F6EFE3;color:#4A3B32;font-family:'Nunito',sans-serif}
+  .topbar{display:flex;align-items:center;gap:32px;padding:18px 48px;background:#FFFDF8;border-bottom:1px solid #E8DCC8}
+  .brand{font-weight:800;font-size:20px;letter-spacing:-.3px}
+  .brand span{color:#E8A87C}
+  nav{display:flex;gap:8px;margin-left:12px}
+  nav a{font-size:14px;font-weight:600;color:#8A7566;text-decoration:none;padding:8px 14px;border-radius:999px}
+  nav a.on{background:#F2C9C2;color:#4A3B32}
+  .who{margin-left:auto;font-size:13px;color:#8A7566;display:flex;align-items:center;gap:10px}
+  .dot{width:26px;height:26px;border-radius:50%;background:#C9D9C5;display:inline-block}
+  .stageline{display:flex;align-items:center;gap:14px;padding:14px 48px 0}
+  .stage{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.08em;color:#8A7566;text-transform:uppercase}
+  .stagerail{display:flex;gap:6px;align-items:center}
+  .pill{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:#EDE4D4;color:#8A7566}
+  .pill.done{background:#C9D9C5;color:#3D5245}
+  .pill.now{background:#E8A87C;color:#FFFDF8}
+  .arrowc{color:#C9B8A0;font-size:12px}
+  h1{font-size:26px;font-weight:800;padding:14px 48px 0;letter-spacing:-.5px}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:16px 48px 0}
+  .kpi{background:#FFFDF8;border:1px solid #E8DCC8;border-radius:18px;padding:18px 20px;position:relative;overflow:hidden}
+  .kpi::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;border-radius:18px 0 0 18px}
+  .kpi.k1::after{background:#F2C9C2}.kpi.k2::after{background:#E8D4C0}.kpi.k3::after{background:#C9D9C5}.kpi.k4::after{background:#E8A87C}
+  .kpi .lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#8A7566;text-transform:uppercase}
+  .kpi .val{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-1px;margin-top:4px;line-height:1}
+  .kpi .val em{font-style:normal;font-size:15px;color:#8A7566;font-weight:600}
+  .kpi .sub{font-size:12px;color:#8A7566;margin-top:6px}
+  .kpi .up{color:#5B8C6A;font-weight:700}
+  .main{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;padding:16px 48px}
+  .card{background:#FFFDF8;border:1px solid #E8DCC8;border-radius:18px;padding:20px}
+  .card h2{font-size:15px;font-weight:800;letter-spacing:-.2px}
+  .card .hint{font-size:12px;color:#8A7566;margin-top:2px}
+  .chart{margin-top:10px;position:relative;height:240px}
+  .yaxis{position:absolute;left:0;top:0;bottom:24px;display:flex;flex-direction:column;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#B3A28E}
+  .plot{position:absolute;left:44px;right:0;top:0;bottom:24px}
+  .xaxis{position:absolute;left:44px;right:0;bottom:0;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#B3A28E}
+  table{width:100%;border-collapse:collapse;margin-top:8px}
+  th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#8A7566;text-transform:uppercase;text-align:left;padding:8px 6px;border-bottom:1px solid #E8DCC8}
+  td{padding:9px 6px;font-size:13px;border-bottom:1px solid #F3EBDD;font-variant-numeric:tabular-nums}
+  td.r,th.r{text-align:right}
+  .tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#C9D9C5;color:#3D5245}
+  .alerta{margin-top:12px;background:#FBEFE8;border:1px solid #F0C9A8;border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center}
+  .alerta .ic{width:30px;height:30px;border-radius:50%;background:#E8A87C;color:#FFFDF8;display:grid;place-items:center;font-weight:800;font-size:14px}
+  .alerta p{font-size:13px;font-weight:600}
+  .alerta small{color:#8A7566;font-weight:500}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">Inventario<span>SIS</span></div>
+    <nav><a class="on">Dashboard</a><a>Subir Excel</a><a>Análisis IA</a><a>Inventario</a><a>Configuración</a></nav>
+    <div class="who">Panadería La Espiga <span class="dot"></span></div>
+  </div>
+  <div class="stageline">
+    <span class="stage">Jornada de hoy</span>
+    <div class="stagerail">
+      <span class="pill done">Amasado</span><span class="arrowc">›</span>
+      <span class="pill done">Horneado</span><span class="arrowc">›</span>
+      <span class="pill now">Vendido · 42 pedidos</span><span class="arrowc">›</span>
+      <span class="pill">Cierre 19:00</span>
+    </div>
+  </div>
+  <h1>Tu negocio, en etapas</h1>
+  <div class="kpis">
+    <div class="kpi k1"><div class="lbl">Ingresos · Octubre</div><div class="val">Bs 48.320 <em>≈ USD 6.980</em></div><div class="sub"><span class="up">▲ 12%</span> vs septiembre</div></div>
+    <div class="kpi k2"><div class="lbl">Costos</div><div class="val">Bs 31.150</div><div class="sub">Harina +8% este mes</div></div>
+    <div class="kpi k3"><div class="lbl">Ganancia neta</div><div class="val">Bs 17.170</div><div class="sub">Tasa: 1 USD = 6,92 Bs</div></div>
+    <div class="kpi k4"><div class="lbl">Margen</div><div class="val">35,5%</div><div class="sub"><span class="up">▲ 2,1 pts</span> vs mes anterior</div></div>
+  </div>
+  <div class="main">
+    <div class="card">
+      <h2>Curva de fermentación — ingresos de 30 días</h2>
+      <div class="hint">La masa sube: cada día es una fermentación que termina en la caja.</div>
+      <div class="chart">
+        <div class="yaxis"><span>3.2k</span><span>2.4k</span><span>1.6k</span><span>0</span></div>
+        <div class="plot">
+          <svg width="100%" height="100%" viewBox="0 0 640 216" preserveAspectRatio="none">
+            <defs><linearGradient id="d" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F2C9C2" stop-opacity=".95"/><stop offset="100%" stop-color="#F6EFE3" stop-opacity=".25"/></linearGradient></defs>
+            <line x1="0" y1="54" x2="640" y2="54" stroke="#EDE4D4"/><line x1="0" y1="108" x2="640" y2="108" stroke="#EDE4D4"/><line x1="0" y1="162" x2="640" y2="162" stroke="#EDE4D4"/>
+            <path d="M0,180 C40,170 70,150 110,146 C150,142 180,158 220,140 C260,122 290,96 330,92 C370,88 400,110 440,84 C480,58 520,44 560,38 C600,32 620,30 640,28 L640,216 L0,216 Z" fill="url(#d)"/>
+            <path d="M0,180 C40,170 70,150 110,146 C150,142 180,158 220,140 C260,122 290,96 330,92 C370,88 400,110 440,84 C480,58 520,44 560,38 C600,32 620,30 640,28" fill="none" stroke="#E8A87C" stroke-width="2.5"/>
+            <circle cx="640" cy="28" r="5" fill="#E8A87C"/><circle cx="640" cy="28" r="10" fill="#E8A87C" opacity=".25"/>
+          </svg>
+        </div>
+        <div class="xaxis"><span>1 oct</span><span>8 oct</span><span>15 oct</span><span>22 oct</span><span>30 oct</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Lo que más sale</h2>
+      <div class="hint">Productos del mes, listos para hornear más.</div>
+      <table>
+        <tr><th>Producto</th><th class="r">Unid.</th><th class="r">Ingresos</th></tr>
+        <tr><td>Pan francés</td><td class="r">8.420</td><td class="r">Bs 12.630</td></tr>
+        <tr><td>Alfajor de maicena</td><td class="r">2.180</td><td class="r">Bs 8.720</td></tr>
+        <tr><td>Croissant de mantequilla</td><td class="r">1.640</td><td class="r">Bs 7.380</td></tr>
+        <tr><td>Torta de chocolate 1/2</td><td class="r">312</td><td class="r">Bs 6.240</td></tr>
+      </table>
+      <div class="alerta"><div class="ic">!</div><p>Stock bajo: Harina 0000 — quedan 12 kg <small>· mínimo 25 kg · reponer antes del sábado</small></p></div>
+    </div>
+  </div>
+</body>
+</html>

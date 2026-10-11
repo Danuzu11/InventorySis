@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Señalización de Terminal — InventarioSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1440px;height:900px;overflow:hidden;background:#F4F4F2;color:#111;font-family:'Archivo',sans-serif}
+  .top{display:flex;align-items:center;background:#111;color:#fff;padding:0 48px;height:56px;gap:24px}
+  .brand{font-weight:800;font-size:17px;letter-spacing:-.2px}
+  .brand span{color:#FFD200}
+  nav{display:flex;gap:22px;margin-left:20px}
+  nav a{color:#bdbdbd;text-decoration:none;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+  nav a.on{color:#fff;border-bottom:3px solid #FFD200;padding-bottom:16px;margin-bottom:-16px}
+  .rate{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#FFD200}
+  .band{background:#FFD200;margin:14px 48px 0;padding:14px 22px;display:flex;align-items:center;gap:18px}
+  .band .ic{width:38px;height:38px;background:#111;display:grid;place-items:center}
+  .band .ic svg{width:22px;height:22px;fill:#fff}
+  .band .msg{font-size:15px;font-weight:700;letter-spacing:.01em}
+  .band .num{margin-left:auto;font-size:44px;font-weight:800;letter-spacing:-1.5px;font-variant-numeric:tabular-nums;line-height:1}
+  .band .delta{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;background:#111;color:#FFD200;padding:5px 10px}
+  .band .arw{font-size:26px;font-weight:800}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 48px 0}
+  .panel{background:#fff;border:2px solid #111;padding:18px 20px}
+  .panel .hdr{display:flex;align-items:center;gap:10px;border-bottom:1px solid #ddd;padding-bottom:10px}
+  .panel .hdr .sq{width:22px;height:22px;background:#111;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+  .panel h2{font-size:13.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .panel .go{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#666}
+  .prodrow{display:flex;align-items:center;padding:11px 2px;border-bottom:1px solid #eee;gap:12px}
+  .prodrow:last-child{border:0}
+  .rank{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:#111;width:26px}
+  .pname{font-size:14px;font-weight:600}
+  .ptrail{flex:1;height:8px;background:#eee;position:relative}
+  .pfill{position:absolute;left:0;top:0;bottom:0;background:#111}
+  .pval{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;width:86px;text-align:right}
+  .alertband{margin:14px 48px 0;background:#111;color:#fff;display:flex;align-items:center;gap:16px;padding:13px 22px}
+  .alertband .badge{background:#C0392B;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;padding:5px 10px;letter-spacing:.06em}
+  .alertband .txt{font-size:14px;font-weight:600}
+  .alertband .sub{color:#aaa;font-size:12.5px;font-weight:500}
+  .alertband .act{margin-left:auto;background:#FFD200;color:#111;font-size:12.5px;font-weight:800;padding:9px 16px;letter-spacing:.02em}
+  .chartband{margin:14px 48px 0;background:#fff;border:2px solid #111;padding:16px 20px}
+  .chartband h2{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+  .chartwrap{height:140px;position:relative}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="brand">Inventario<span>SIS</span></div>
+    <nav><a class="on">Dashboard</a><a>Subir Excel</a><a>Análisis IA</a><a>Inventario</a><a>Configuración</a></nav>
+    <div class="rate">1 USD = 6,92 Bs · Panadería La Espiga</div>
+  </div>
+  <div class="band">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8v5h2V6h-8v2h5l-7 7-4-4-8 8z"/></svg></div>
+    <div class="msg">INGRESOS DE OCTUBRE — SUMAN +12% VS SEPTIEMBRE</div>
+    <div class="num">Bs 48.320</div>
+    <div class="delta">≈ USD 6.980</div>
+    <div class="arw">→</div>
+  </div>
+  <div class="grid">
+    <div class="band" style="margin:0">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
+      <div class="msg">COSTOS — LA HARINA SUBIÓ 8%</div>
+      <div class="num">Bs 31.150</div>
+    </div>
+    <div class="band" style="margin:0">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/></svg></div>
+      <div class="msg">GANANCIA NETA — MARGEN 35,5%</div>
+      <div class="num">Bs 17.170</div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="panel">
+      <div class="hdr"><div class="sq">1</div><h2>Destinos con más ingresos</h2><div class="go">OCT · TOP 4</div></div>
+      <div class="prodrow"><span class="rank">01</span><span class="pname">Pan francés</span><span class="ptrail"><span class="pfill" style="width:100%"></span></span><span class="pval">12.630 Bs</span></div>
+      <div class="prodrow"><span class="rank">02</span><span class="pname">Alfajor de maicena</span><span class="ptrail"><span class="pfill" style="width:69%"></span></span><span class="pval">8.720 Bs</span></div>
+      <div class="prodrow"><span class="rank">03</span><span class="pname">Croissant</span><span class="ptrail"><span class="pfill" style="width:58%"></span></span><span class="pval">7.380 Bs</span></div>
+      <div class="prodrow"><span class="rank">04</span><span class="pname">Torta de chocolate</span><span class="ptrail"><span class="pfill" style="width:49%"></span></span><span class="pval">6.240 Bs</span></div>
+    </div>
+    <div class="panel">
+      <div class="hdr"><div class="sq">2</div><h2>Ingresos · 30 días</h2><div class="go">CORTE 30/10</div></div>
+      <div class="chartwrap">
+        <svg width="100%" height="100%" viewBox="0 0 620 140" preserveAspectRatio="none">
+          <line x1="0" y1="35" x2="620" y2="35" stroke="#eee"/><line x1="0" y1="70" x2="620" y2="70" stroke="#eee"/><line x1="0" y1="105" x2="620" y2="105" stroke="#eee"/>
+          <path d="M0,118 C55,108 90,88 145,86 C200,84 235,102 290,76 C345,50 380,30 435,36 C490,42 525,64 580,38 L620,30" fill="none" stroke="#111" stroke-width="2.5"/>
+          <path d="M0,118 C55,108 90,88 145,86 C200,84 235,102 290,76 C345,50 380,30 435,36 C490,42 525,64 580,38 L620,30 L620,140 L0,140 Z" fill="#FFD200" opacity=".35"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="alertband">
+    <div class="badge">STOCK BAJO</div>
+    <div><div class="txt">HARINA 0000 — QUEDAN 12 KG</div><div class="sub">Mínimo operativo 25 kg · reponer antes del sábado</div></div>
+    <div class="act">VER INVENTARIO →</div>
+  </div>
+</body>
+</html>

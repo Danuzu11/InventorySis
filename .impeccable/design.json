@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T00:00:00.000Z",
+  "title": "Design System: InventarioSIS",
+  "extensions": {
+    "colorMeta": {
+      "masa": {
+        "role": "neutral",
+        "displayName": "Masa Cruda",
+        "canonical": "#f6efe3",
+        "dark": "#241f1c",
+        "tonalRamp": ["#0c0b08", "#28251f", "#464139", "#666056", "#888177", "#aaa49b", "#cdc9c1", "#f0eeea"]
+      },
+      "tarjeta": {
+        "role": "neutral",
+        "displayName": "Harina",
+        "canonical": "#fffdf8",
+        "dark": "#2e2823",
+        "tonalRamp": ["#0c0b0a", "#262523", "#43423e", "#63615d", "#84827e", "#a6a5a1", "#cac9c6", "#efeeed"]
+      },
+      "borde": {
+        "role": "neutral",
+        "displayName": "Corte",
+        "canonical": "#e8dcc8",
+        "dark": "#423a32",
+        "tonalRamp": ["#0d0b07", "#2a241b", "#494133", "#6a604f", "#8c816f", "#ada493", "#d0c8bc", "#f2eee7"]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Cacao",
+        "canonical": "#4a3b32",
+        "dark": "#f0e6d8",
+        "tonalRamp": ["#0e0a08", "#2c231e", "#4c3f37", "#6d5e54", "#8f7e74", "#b1a298", "#d2c6c0", "#f4ede9"]
+      },
+      "suave": {
+        "role": "neutral",
+        "displayName": "Avena",
+        "canonical": "#756252",
+        "dark": "#b5a28e",
+        "tonalRamp": ["#0f0a06", "#2d231a", "#4e3f32", "#705d4e", "#927e6e", "#b3a193", "#d4c6bb", "#f5ede6"]
+      },
+      "rosa": {
+        "role": "primary",
+        "displayName": "Rosa Fermentado",
+        "canonical": "#f2c9c2",
+        "dark": "#e8a99e",
+        "tonalRamp": ["#120907", "#321f1c", "#563a35", "#7a5752", "#9d7872", "#be9c96", "#dcc2be", "#faebe8"]
+      },
+      "pistacho": {
+        "role": "secondary",
+        "displayName": "Pistacho",
+        "canonical": "#c9d9c5",
+        "dark": "#a8c4a4",
+        "tonalRamp": ["#090c08", "#20281e", "#3b4638", "#586655", "#798775", "#9caa99", "#c3cdc0", "#ebf0e9"]
+      },
+      "melaza": {
+        "role": "secondary",
+        "displayName": "Melaza",
+        "canonical": "#e8d4c0",
+        "dark": "#c9ab88",
+        "tonalRamp": ["#0f0a06", "#2c231a", "#4d3f31", "#6f5e4d", "#917f6d", "#b2a292", "#d3c7ba", "#f4ede6"]
+      },
+      "ambar": {
+        "role": "primary",
+        "displayName": "Ámbar Horno",
+        "canonical": "#e8a87c",
+        "dark": "#e8a87c",
+        "tonalRamp": ["#160701", "#3b1c03", "#62340f", "#895127", "#ae7349", "#ce9873", "#e9c0a4", "#ffe9da"]
+      },
+      "ambar-fuerte": {
+        "role": "primary",
+        "displayName": "Ámbar Hondo",
+        "canonical": "#d4845a",
+        "dark": "#f0b88e",
+        "tonalRamp": ["#180500", "#401700", "#6a2e07", "#934a20", "#b86c43", "#d8926e", "#f1bca1", "#ffe7d8"]
+      },
+      "verde": {
+        "role": "tertiary",
+        "displayName": "Verde Hoja",
+        "canonical": "#4d7d5e",
+        "dark": "#8fbd9e",
+        "tonalRamp": ["#030e07", "#112b1b", "#244c33", "#3e6d4f", "#5f8f70", "#87b194", "#b3d2bc", "#e2f4e7"]
+      },
+      "alerta": {
+        "role": "tertiary",
+        "displayName": "Brasa",
+        "canonical": "#b85c4a",
+        "dark": "#e08a76",
+        "tonalRamp": ["#1a0402", "#43120a", "#6f271a", "#9a4232", "#c06452", "#df8c7b", "#f7b7a9", "#ffe5dd"]
+      },
+      "serie-a": {
+        "role": "chart-series",
+        "displayName": "Serie A (Ingresos)",
+        "canonical": "#f2c9c2",
+        "dark": "#e8a99e",
+        "tonalRamp": ["#120907", "#321f1c", "#563a35", "#7a5752", "#9d7872", "#be9c96", "#dcc2be", "#faebe8"]
+      },
+      "serie-b": {
+        "role": "chart-series",
+        "displayName": "Serie B (Costos)",
+        "canonical": "#e8d4c0",
+        "dark": "#c9ab88",
+        "tonalRamp": ["#0f0a06", "#2c231a", "#4d3f31", "#6f5e4d", "#917f6d", "#b2a292", "#d3c7ba", "#f4ede6"]
+      },
+      "serie-c": {
+        "role": "chart-series",
+        "displayName": "Serie C (Ganancia)",
+        "canonical": "#c9d9c5",
+        "dark": "#a8c4a4",
+        "tonalRamp": ["#090c08", "#20281e", "#3b4638", "#586655", "#798775", "#9caa99", "#c3cdc0", "#ebf0e9"]
+      }
+    },
+    "typographyMeta": {
+      "kpi": {
+        "displayName": "KPI Figure",
+        "purpose": "Monumental tabular number at the head of every KPI card. Always with .tnum."
+      },
+      "h1": {
+        "displayName": "Page Title",
+        "purpose": "One per page, Nunito extrabold, tight tracking."
+      },
+      "h2": {
+        "displayName": "Card Title",
+        "purpose": "Section/card headers (chart, top products, empty states)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions, table cells, helper and empty-state copy. Spanish voseo voice."
+      },
+      "label-mono": {
+        "displayName": "Micro-label",
+        "purpose": "The only uppercase in the system: KPI labels, rail kicker, table headers."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for rise-in and dough-grow; soft dough deceleration."
+      },
+      {
+        "name": "rise-in",
+        "value": "0.55s cubic-bezier(0.16, 1, 0.3, 1) both; from opacity 0 / translateY(10px)",
+        "purpose": "Mount animation for every card, section and page block; stagger siblings 60–80ms via animationDelay (dashboard caps at 380ms)."
+      },
+      {
+        "name": "dough-grow",
+        "value": "0.9s cubic-bezier(0.16, 1, 0.3, 1) both; from scaleX(0.92) / opacity 0.4; transform-origin: left center",
+        "purpose": "Dough-curve container grows horizontally like dough on mount."
+      },
+      {
+        "name": "pulse-dot",
+        "value": "2.2s ease-in-out infinite; scale(1)→scale(1.45), opacity 1→0.55; transform-box: fill-box; transform-origin: center",
+        "purpose": "Halo of the live chart point on today's zero — the system's heartbeat."
+      },
+      {
+        "name": "theme-crossfade",
+        "value": "0.35s ease on body background-color and color",
+        "purpose": "Light/dark switch cross-fade; only global transition on the page chrome."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "KPI Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The workhorse metric card: pastel role bar, mono micro-label, monumental tabular figure, suave sub-line. Stagger on mount.",
+      "html": "<div class=\"ds-kpi\" style=\"animation-delay: 80ms\"><span class=\"ds-kpi__bar\" aria-hidden=\"true\"></span><p class=\"ds-kpi__label\">COSTOS · OCTUBRE 2026</p><p class=\"ds-kpi__value\">Bs 10.220<span class=\"ds-kpi__unit\">≈ USD 1.477</span></p><p class=\"ds-kpi__sub\">Sobre ingresos: 35,87%</p></div>",
+      "css": "@keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } .ds-kpi { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--borde); background: var(--tarjeta); color: var(--tinta); padding: 20px; font-family: var(--font-nunito), ui-rounded, sans-serif; animation: rise-in 0.55s cubic-bezier(0.16,1,0.3,1) both; } .ds-kpi__bar { position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background: var(--melaza); } .ds-kpi__label { font-family: var(--font-plex-mono), ui-monospace, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--suave); } .ds-kpi__value { margin-top: 6px; font-size: 32px; line-height: 1; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; } .ds-kpi__unit { margin-left: 4px; font-size: 15px; font-weight: 700; color: var(--suave); } .ds-kpi__sub { margin-top: 8px; font-size: 12.5px; font-weight: 600; color: var(--suave); } .ds-kpi:hover { border-color: var(--borde); }"
+    },
+    {
+      "name": "Stage Pill",
+      "kind": "chip",
+      "refersTo": "stage-pill-now",
+      "description": "Workday stage chip: done = pistacho, now = amber, next = melaza. Full-round, icon + 12px bold label.",
+      "html": "<div class=\"ds-rail\"><span class=\"ds-rail__kicker\">JORNADA DE HOY</span><span class=\"ds-pill ds-pill--done\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg>Amasado</span><span class=\"ds-rail__sep\" aria-hidden=\"true\">›</span><span class=\"ds-pill ds-pill--now\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2 22 16 8\"/><path d=\"M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/><path d=\"M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/><path d=\"M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/></svg>Vendido · 4 pedidos</span><span class=\"ds-rail__sep\" aria-hidden=\"true\">›</span><span class=\"ds-pill ds-pill--next\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>Cierre 19:00</span></div>",
+      "css": ".ds-rail { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-nunito), ui-rounded, sans-serif; } .ds-rail__kicker { font-family: var(--font-plex-mono), ui-monospace, monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--suave); } .ds-rail__sep { color: var(--borde); } .ds-pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 9999px; padding: 6px 12px; font-size: 12px; font-weight: 700; transition: background-color 0.15s, color 0.15s; } .ds-pill--done { background: var(--pistacho); color: #33463a; } :host-context(.dark) .ds-pill--done, .dark .ds-pill--done { color: #dff0e2; } .ds-pill--now { background: var(--ambar); color: #3b2417; } :host-context(.dark) .ds-pill--now, .dark .ds-pill--now { color: #2b1a10; } .ds-pill--next { background: var(--melaza); color: #5c4a3d; } :host-context(.dark) .ds-pill--next, .dark .ds-pill--next { background: color-mix(in srgb, var(--melaza) 40%, transparent); color: var(--suave); }"
+    },
+    {
+      "name": "Dough Curve",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature area chart: serie-a gradient fill, amber stroke, pulsing live dot on the last point. Static SVG stand-in for the Recharts component.",
+      "html": "<div class=\"ds-curve\" role=\"img\" aria-label=\"Curva de ingresos diarios. Último día: Bs 2612.\"><svg viewBox=\"0 0 480 160\" width=\"100%\" height=\"160\" preserveAspectRatio=\"none\"><defs><linearGradient id=\"dsMasaFill\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"var(--serie-a)\" stop-opacity=\"0.95\"/><stop offset=\"100%\" stop-color=\"var(--serie-a)\" stop-opacity=\"0.16\"/></linearGradient></defs><line x1=\"0\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"var(--borde)\"/><line x1=\"0\" y1=\"80\" x2=\"480\" y2=\"80\" stroke=\"var(--borde)\"/><line x1=\"0\" y1=\"120\" x2=\"480\" y2=\"120\" stroke=\"var(--borde)\"/><line x1=\"0\" y1=\"159\" x2=\"480\" y2=\"159\" stroke=\"var(--borde)\"/><path d=\"M0 120 C 40 100, 70 60, 110 70 S 180 110, 220 85 S 300 40, 350 55 S 430 90, 460 75 L 470 78\" fill=\"none\" stroke=\"var(--ambar)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><path d=\"M0 120 C 40 100, 70 60, 110 70 S 180 110, 220 85 S 300 40, 350 55 S 430 90, 460 75 L 470 78 L 470 160 L 0 160 Z\" fill=\"url(#dsMasaFill)\"/><circle cx=\"470\" cy=\"78\" r=\"10\" fill=\"var(--ambar)\" opacity=\"0.25\" class=\"ds-curve__halo\"/><circle cx=\"470\" cy=\"78\" r=\"4.5\" fill=\"var(--ambar)\" stroke=\"var(--tarjeta)\" stroke-width=\"2\"/></svg></div>",
+      "css": "@keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.45); opacity: 0.55; } } @keyframes dough-grow { from { transform: scaleX(0.92); opacity: 0.4; } to { transform: scaleX(1); opacity: 1; } } .ds-curve { height: 160px; transform-origin: left center; animation: dough-grow 0.9s cubic-bezier(0.16,1,0.3,1) both; } .ds-curve__halo { transform-box: fill-box; transform-origin: center; animation: pulse-dot 2.2s ease-in-out infinite; } @media (prefers-reduced-motion: reduce) { .ds-curve, .ds-curve__halo { animation: none !important; } }"
+    },
+    {
+      "name": "Data Table",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Top-products table: mono uppercase headers, hairline borde separators, tabular numerics right-aligned.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>PRODUCTO</th><th class=\"ds-table__num\">UNID.</th><th class=\"ds-table__num\">INGRESOS</th></tr></thead><tbody><tr><td>Pan francés</td><td class=\"ds-table__num\">7.269</td><td class=\"ds-table__num ds-table__strong\">Bs 10.904</td></tr><tr><td>Alfajor de maicena</td><td class=\"ds-table__num\">1.539</td><td class=\"ds-table__num ds-table__strong\">Bs 6.156</td></tr><tr><td>Croissant de mantequilla</td><td class=\"ds-table__num\">1.023</td><td class=\"ds-table__num ds-table__strong\">Bs 4.604</td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-family: var(--font-nunito), ui-rounded, sans-serif; color: var(--tinta); } .ds-table th { padding: 10px 12px 10px 0; text-align: left; font-family: var(--font-plex-mono), ui-monospace, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--suave); border-bottom: 1px solid var(--borde); } .ds-table td { padding: 12px 12px 12px 0; font-size: 13.5px; font-weight: 600; border-bottom: 1px solid color-mix(in srgb, var(--borde) 60%, transparent); } .ds-table tr:last-child td { border-bottom: 0; } .ds-table__num { text-align: right; font-variant-numeric: tabular-nums; } .ds-table th.ds-table__num { text-align: right; } .ds-table__strong { font-weight: 700; }"
+    },
+    {
+      "name": "Stock Alert",
+      "kind": "card",
+      "refersTo": "alert-stock",
+      "description": "Actionable low-stock strip: amber-tinted well, amber icon circle, small amber CTA. Pastel healthy variant when empty.",
+      "html": "<div class=\"ds-alert\"><span class=\"ds-alert__icon\" aria-hidden=\"true\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg></span><div class=\"ds-alert__body\"><p class=\"ds-alert__title\">Stock bajo: Harina 0000 — quedan 12 <span class=\"ds-alert__extra\">(+1 más)</span></p><p class=\"ds-alert__sub\">Mínimo 25 · reponer antes de que se acabe</p></div><a class=\"ds-alert__cta\" href=\"#\">Ver inventario</a></div>",
+      "css": ".ds-alert { display: flex; align-items: center; gap: 12px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--ambar) 50%, transparent); background: color-mix(in srgb, var(--ambar) 15%, transparent); padding: 14px 16px; font-family: var(--font-nunito), ui-rounded, sans-serif; color: var(--tinta); } .ds-alert__icon { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; flex-shrink: 0; border-radius: 9999px; background: var(--ambar); color: #3b2417; } :host-context(.dark) .ds-alert__icon, .dark .ds-alert__icon { color: #2b1a10; } .ds-alert__title { font-size: 13px; font-weight: 700; } .ds-alert__extra { font-weight: 600; color: var(--suave); } .ds-alert__sub { font-size: 12px; font-weight: 600; color: var(--suave); } .ds-alert__cta { margin-left: auto; border-radius: 8px; background: var(--ambar); color: #3b2417; padding: 8px 14px; font-size: 12px; font-weight: 800; text-decoration: none; transition: background-color 0.15s; } .ds-alert__cta:hover { background: var(--ambar-fuerte); } .ds-alert__cta:focus-visible { outline: 2px solid var(--ambar); outline-offset: 2px; border-radius: 4px; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The only filled button. Amber means it does something; disabled drops to 45% opacity.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Entrar a mi panadería <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: none; cursor: pointer; border-radius: 12px; background: var(--ambar); color: #3b2417; padding: 14px 20px; font-family: var(--font-nunito), ui-rounded, sans-serif; font-size: 15px; font-weight: 800; transition: background-color 0.15s; } :host-context(.dark) .ds-btn, .dark .ds-btn { color: #2b1a10; } .ds-btn:hover { background: var(--ambar-fuerte); } .ds-btn:focus-visible { outline: 2px solid var(--ambar); outline-offset: 2px; border-radius: 4px; } .ds-btn:disabled { opacity: 0.45; cursor: not-allowed; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Pill navigation link. Active = rosa wash + aria-current; idle = suave with melaza hover.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\" aria-current=\"page\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"M18 17V9\"/><path d=\"M13 17V5\"/><path d=\"M8 17v-3\"/></svg>Dashboard</a><a class=\"ds-nav__link\" href=\"#\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v5h5\"/></svg>Subir Excel</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 2px; font-family: var(--font-nunito), ui-rounded, sans-serif; } .ds-nav__link { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; padding: 8px 14px; font-size: 14px; font-weight: 600; color: var(--suave); text-decoration: none; white-space: nowrap; transition: background-color 0.15s, color 0.15s; } .ds-nav__link:hover { background: color-mix(in srgb, var(--melaza) 50%, transparent); color: var(--tinta); } .ds-nav__link--active { background: var(--rosa); color: var(--tinta); } .ds-nav__link:focus-visible { outline: 2px solid var(--ambar); outline-offset: 2px; border-radius: 4px; }"
+    },
+    {
+      "name": "License Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Mono license-key field: masa well inside a tarjeta card, amber border on focus, global amber caret.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field__label\">Clave de licencia</span><input class=\"ds-field__input\" type=\"text\" placeholder=\"INV-XXXX-XXXX\" spellcheck=\"false\" autocomplete=\"off\"/></label>",
+      "css": ".ds-field { display: block; font-family: var(--font-nunito), ui-rounded, sans-serif; color: var(--tinta); } .ds-field__label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; } .ds-field__input { width: 100%; box-sizing: border-box; border-radius: 12px; border: 1px solid var(--borde); background: var(--masa); color: var(--tinta); padding: 14px 16px; font-family: var(--font-plex-mono), ui-monospace, monospace; font-size: 15px; letter-spacing: 0.05em; font-variant-numeric: tabular-nums; caret-color: var(--ambar); transition: border-color 0.15s; } .ds-field__input::placeholder { color: var(--suave); opacity: 0.8; } .ds-field__input:focus { border-color: var(--ambar); outline: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Masa Viva",
+    "overview": "Every surface is dough-toned: the page floor is raw masa, cards are flour-white sheets, and the three pastel stage colors (rosa, pistacho, melaza) encode what each number means in the bakery's day — sales, profit, cost. Time is dough: every temporal series rises like a fermentation curve, and the workday is a rail of stage pills (done → now → next). The system refuses the generic SaaS dashboard (light gray floor, corporate blue, interchangeable cards) on both aesthetic and product grounds: the owner is a baker, not an analyst, and the interface should feel like the counter of their shop.\n\nDensity is calm and generous: one accent family, one mono voice for machine labels, one rounded humanist face for everything else. The single saturated color in the entire system is oven amber, and it is spent only where the user can act or where the system is currently alive. Everything else is pastel or ink.",
+    "keyCharacteristics": [
+      "Pastel stage roles: rosa = sales/income, pistacho = profit/good, melaza = cost; amber = action and aliveness only.",
+      "Border-only elevation — depth comes from masa/tarjeta tone step plus a 1px border, never from shadows.",
+      "Monumental tabular KPI figures (32px extrabold) under tiny uppercase mono labels.",
+      "One motion family: soft rise, horizontal dough grow, slow live pulse; all disabled under reduced motion.",
+      "Spanish UI copy with voseo forms, es-BO number formatting, ▲/▼ deltas."
+    ],
+    "rules": [
+      {
+        "name": "The Amber Rule",
+        "body": "ambar is the only saturated color in the system and is spent exclusively on: things you can click, the keyboard focus ring, the text caret, the chart's live point and stroke, and the \"now\" stage. If a screen has more than ~3 amber elements, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stage-Color Law",
+        "body": "rosa = ingresos, pistacho = ganancia, melaza = costos. These meanings are fixed system-wide; never reassign a pastel to a different semantic to \"make a card pop.\"",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Floor Rule",
+        "body": "Page backgrounds are always masa. Cards are always tarjeta. There is no third surface tone and no colored page background.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Caps Rule",
+        "body": "Uppercase is reserved for Plex Mono micro-labels and the DEMO badge. Nunito never goes uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any number the user compares column-down or across states — KPI values, table units/revenues, axis ticks, license input — gets .tnum (font-variant-numeric: tabular-nums). The body default disables tnum globally; opt in per element.",
+        "section": "typography"
+      },
+      {
+        "name": "The Delta Rule",
+        "body": "Period-over-period change renders as ▲ 12,5% / ▼ 3,2% / • 0,0%, colored verde when up, alerta when down. Never a bare sign, never a colored pill.",
+        "section": "typography"
+      },
+      {
+        "name": "The Border-Only Rule",
+        "body": "No card, button, or input carries a box-shadow. Depth is a two-step tonal ladder — masa floor → tarjeta card — sealed by a 1px borde line. The only translucency device in the system is the sticky header's bg-tarjeta/95 + backdrop-blur-sm. Focus is a ring (2px ambar outline, 2px offset, 4px radius), not elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do build every card as tarjeta on masa with a 1px borde and 16px radius — the whole system is that one recipe.",
+      "Do keep amber to actions, focus, caret, and the live chart point; measure a new screen by counting its amber elements.",
+      "Do label every number group with a Plex Mono uppercase micro-label (10–11px, tracking ≥0.1em, suave).",
+      "Do put .tnum on every comparable figure and format with es-BO (bs(), usd(), pct(), deltaPct() helpers).",
+      "Do reuse stage roles for any new metric: rosa sales-side, pistacho good-side, melaza cost-side; new series come from serie-a/b/c.",
+      "Do enter new page blocks with rise-in and stagger siblings ~60–80ms; keep total stagger under 400ms.",
+      "Do write UI copy in Spanish with the shipped voseo voice (\"Subí\", \"Conectá\", \"mirá\") and honest empty/error sentences."
+    ],
+    "donts": [
+      "Don't add box-shadow to cards, buttons, or inputs — the border-only rule is absolute.",
+      "Don't introduce a new saturated hue, a dark \"premium\" card, or a colored page background.",
+      "Don't set Nunito in uppercase, or Plex Mono for sentences/numbers-that-aren't-labels.",
+      "Don't color a stage pill or role bar by taste — the rosa/pistacho/melaza meanings are fixed.",
+      "Don't use amber text on pastel or masa surfaces for \"emphasis\"; use tinta or suave.",
+      "Don't animate under reduced motion, and don't ship an infinite animation other than the live-dot pulse.",
+      "Don't fabricate customers, testimonials, or decorative data — PRODUCT.md forbids invented evidence."
+    ]
+  }
+}

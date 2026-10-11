@@ -1,0 +1,4 @@
+QUESTION URL: http://127.0.0.1:57945/
+QUESTION KEY: 958d5834
+Open the URL for the user now: in-app browser when the harness has one, otherwise the system opener (macOS `open`, Linux `xdg-open`), otherwise show the URL.
+Then collect the answer with: C:\Users\AMD\Desktop\Desk\proyectos_codigo\InventarioSISIs\.agents\skills\impeccable\scripts\impeccable.cmd serve-question --wait --key 958d5834

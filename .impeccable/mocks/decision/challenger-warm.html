@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mostrador Cálido — InventarioSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1440px;height:900px;overflow:hidden;background:#FDF3EC;color:#3B2F2A;font-family:'Outfit',sans-serif}
+  .bar{display:flex;align-items:center;gap:28px;padding:16px 40px}
+  .brand{font-weight:800;font-size:19px}
+  .brand b{color:#E56B5D}
+  nav{display:flex;gap:4px;margin-left:8px}
+  nav a{font-size:14px;font-weight:600;color:#9B857C;text-decoration:none;padding:9px 16px;border-radius:12px}
+  nav a.on{background:#fff;color:#3B2F2A;box-shadow:0 1px 3px rgba(90,60,40,.08)}
+  .cta{margin-left:auto;background:#E56B5D;color:#fff;font-weight:700;font-size:14px;padding:11px 22px;border-radius:14px}
+  h1{font-size:28px;font-weight:800;padding:10px 40px 0;letter-spacing:-.6px}
+  .sub{padding:4px 40px 0;color:#9B857C;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:20px 40px 0}
+  .card{background:#fff;border-radius:22px;padding:22px 24px;box-shadow:0 2px 10px rgba(90,60,40,.06)}
+  .card .lbl{font-size:12px;font-weight:700;color:#9B857C;letter-spacing:.04em;text-transform:uppercase}
+  .card .val{font-size:36px;font-weight:800;letter-spacing:-1px;margin-top:6px;font-variant-numeric:tabular-nums;line-height:1}
+  .card .val small{font-size:14px;color:#9B857C;font-weight:600}
+  .card .chip{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;background:#EAF3EC;color:#3E7A52}
+  .card .chip.warn{background:#FBE9E4;color:#C24B3D}
+  .main{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;padding:18px 40px}
+  .card h2{font-size:16px;font-weight:700}
+  .hint{font-size:13px;color:#9B857C;margin-top:2px}
+  .chart{height:250px;margin-top:12px;position:relative}
+  .plot{position:absolute;left:40px;right:0;top:0;bottom:22px}
+  .yaxis{position:absolute;left:0;top:0;bottom:22px;display:flex;flex-direction:column;justify-content:space-between;font-size:10px;color:#C9B4A9;font-weight:600}
+  .xaxis{position:absolute;left:40px;right:0;bottom:0;display:flex;justify-content:space-between;font-size:10px;color:#C9B4A9;font-weight:600}
+  .rows{margin-top:10px}
+  .row{display:flex;align-items:center;gap:12px;padding:13px 4px;border-bottom:1px solid #F6EBE3}
+  .ic{width:40px;height:40px;border-radius:14px;background:#FBE9E4;display:grid;place-items:center;font-size:18px}
+  .row .nm{font-weight:600;font-size:14px}
+  .row .mt{font-size:12px;color:#9B857C}
+  .row .rt{margin-left:auto;text-align:right}
+  .row .rt b{font-size:14px;font-variant-numeric:tabular-nums}
+  .row .rt span{display:block;font-size:12px;color:#3E7A52;font-weight:700}
+  .alert{margin-top:14px;background:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 2px 10px rgba(90,60,40,.06);display:flex;gap:12px;align-items:center}
+  .alert .b{width:38px;height:38px;border-radius:12px;background:#FBE9E4;color:#E56B5D;display:grid;place-items:center;font-weight:800}
+  .alert p{font-size:13px;font-weight:600}
+  .alert small{color:#9B857C;font-weight:500}
+  .alert .act{margin-left:auto;background:#E56B5D;color:#fff;font-size:12px;font-weight:700;padding:9px 16px;border-radius:12px}
+</style>
+</head>
+<body>
+  <div class="bar">
+    <div class="brand">Inventario<b>SIS</b></div>
+    <nav><a class="on">Dashboard</a><a>Subir Excel</a><a>Análisis IA</a><a>Inventario</a><a>Configuración</a></nav>
+    <div class="cta">Subir Excel</div>
+  </div>
+  <h1>Buen día, Panadería La Espiga</h1>
+  <p class="sub">Todo al día · Tasa de hoy: 1 USD = 6,92 Bs</p>
+  <div class="grid">
+    <div class="card"><div class="lbl">Ingresos</div><div class="val">48.320 <small>Bs</small></div><span class="chip">▲ 12% vs sept.</span></div>
+    <div class="card"><div class="lbl">Costos</div><div class="val">31.150 <small>Bs</small></div><span class="chip warn">▲ 8% harina</span></div>
+    <div class="card"><div class="lbl">Ganancia</div><div class="val">17.170 <small>Bs</small></div><span class="chip">≈ 2.482 USD</span></div>
+    <div class="card"><div class="lbl">Margen</div><div class="val">35,5<small>%</small></div><span class="chip">▲ 2,1 pts</span></div>
+  </div>
+  <div class="main">
+    <div class="card">
+      <h2>Ingresos de los últimos 30 días</h2>
+      <p class="hint">Pico el 22 de octubre: Bs 3.180 en un día.</p>
+      <div class="chart">
+        <div class="yaxis"><span>3.2k</span><span>2.4k</span><span>1.6k</span><span>0</span></div>
+        <div class="plot">
+          <svg width="100%" height="100%" viewBox="0 0 640 228" preserveAspectRatio="none">
+            <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E56B5D" stop-opacity=".16"/><stop offset="100%" stop-color="#E56B5D" stop-opacity="0"/></linearGradient></defs>
+            <line x1="0" y1="57" x2="640" y2="57" stroke="#F6EBE3"/><line x1="0" y1="114" x2="640" y2="114" stroke="#F6EBE3"/><line x1="0" y1="171" x2="640" y2="171" stroke="#F6EBE3"/>
+            <path d="M0,190 C50,178 80,150 130,148 C180,146 210,165 260,130 C310,95 340,60 390,72 C440,84 470,120 520,80 C570,40 600,36 640,32 L640,228 L0,228 Z" fill="url(#g)"/>
+            <path d="M0,190 C50,178 80,150 130,148 C180,146 210,165 260,130 C310,95 340,60 390,72 C440,84 470,120 520,80 C570,40 600,36 640,32" fill="none" stroke="#E56B5D" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="xaxis"><span>1 oct</span><span>8 oct</span><span>15 oct</span><span>22 oct</span><span>30 oct</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h2>Top productos</h2>
+        <div class="rows">
+          <div class="row"><div class="ic">🥖</div><div><div class="nm">Pan francés</div><div class="mt">8.420 unidades</div></div><div class="rt"><b>Bs 12.630</b><span>▲ 9%</span></div></div>
+          <div class="row"><div class="ic">🍪</div><div><div class="nm">Alfajor de maicena</div><div class="mt">2.180 unidades</div></div><div class="rt"><b>Bs 8.720</b><span>▲ 15%</span></div></div>
+          <div class="row"><div class="ic">🥐</div><div><div class="nm">Croissant</div><div class="mt">1.640 unidades</div></div><div class="rt"><b>Bs 7.380</b><span>▲ 4%</span></div></div>
+          <div class="row" style="border:0"><div class="ic">🎂</div><div><div class="nm">Torta de chocolate</div><div class="mt">312 unidades</div></div><div class="rt"><b>Bs 6.240</b><span>▲ 2%</span></div></div>
+        </div>
+      </div>
+      <div class="alert"><div class="b">!</div><div><p>Harina 0000 casi sin stock</p><small>Quedan 12 kg · mínimo 25 kg</small></div><div class="act">Ver inventario</div></div>
+    </div>
+  </div>
+</body>
+</html>

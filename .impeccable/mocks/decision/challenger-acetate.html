@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Manual Acetate — InventarioSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1440px;height:900px;overflow:hidden;background:#E8A03C;color:#1E1B16;font-family:'IBM Plex Sans',sans-serif;display:flex}
+  .rail{width:64px;background:#D4882A;display:flex;flex-direction:column;padding-top:80px;gap:3px}
+  .tab{writing-mode:vertical-rl;transform:rotate(180deg);padding:18px 0;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7A4E12;cursor:pointer}
+  .tab.on{background:#F7F1E3;color:#1E1B16;position:relative}
+  .tab.on::after{content:'';position:absolute;right:-3px;top:0;bottom:0;width:3px;background:#F7F1E3}
+  .leaf{flex:1;background:#F7F1E3;margin:22px 90px 22px 0;border-radius:2px;box-shadow:1px 0 0 rgba(0,0,0,.08), 0 12px 28px rgba(60,30,0,.18);padding:36px 44px;position:relative}
+  .holes{position:absolute;left:14px;top:70px;bottom:70px;display:flex;flex-direction:column;justify-content:center;gap:170px}
+  .hole{width:16px;height:16px;border-radius:50%;background:#E8A03C;box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+  .head{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid #1E1B16;padding-bottom:14px}
+  .head h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+  .head .mono{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8C7A5C;text-transform:uppercase}
+  .head .pg{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8C7A5C}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;border:1.5px solid #1E1B16}
+  .cell{padding:16px 18px;border-right:1px solid #C9BBA0}
+  .cell:last-child{border-right:0}
+  .cell .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8C7A5C}
+  .cell .val{font-size:30px;font-weight:700;letter-spacing:-.8px;margin-top:5px;font-variant-numeric:tabular-nums;line-height:1}
+  .cell .val small{font-size:13px;color:#8C7A5C;font-weight:500}
+  .cell .st{margin-top:7px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8C7A5C}
+  .st b{color:#1E1B16}
+  .cols{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;margin-top:24px}
+  h2{font-size:13px;font-weight:700;letter-spacing:.02em;border-bottom:1px solid #1E1B16;padding-bottom:8px}
+  table{width:100%;border-collapse:collapse;margin-top:10px}
+  th{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8C7A5C;text-align:left;padding:7px 6px;border-bottom:1px solid #C9BBA0}
+  td{padding:10px 6px;font-size:13px;border-bottom:1px solid #E4D9C2;font-variant-numeric:tabular-nums}
+  td.r,th.r{text-align:right}
+  .stamp{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.1em;border:1.5px solid #1E1B16;padding:2px 7px;border-radius:2px}
+  .stamp.g{border-color:#4A7A4E;color:#4A7A4E}
+  .stamp.a{border-color:#B07A1E;color:#B07A1E}
+  .errata{margin-top:14px;border:1.5px dashed #C0392B;color:#C0392B;padding:12px 14px;font-size:12.5px;display:flex;gap:10px;align-items:baseline}
+  .errata b{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em}
+  .chart{margin-top:10px;height:150px}
+  .foot{position:absolute;left:44px;right:44px;bottom:22px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8C7A5C;letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+  <div class="rail">
+    <div class="tab on">Resumen</div>
+    <div class="tab">Ventas</div>
+    <div class="tab">Compras</div>
+    <div class="tab">Inventario</div>
+    <div class="tab">Análisis IA</div>
+    <div class="tab">Config</div>
+  </div>
+  <div class="leaf">
+    <div class="holes"><div class="hole"></div><div class="hole"></div></div>
+    <div class="head">
+      <h1>InventarioSIS — Resumen operativo</h1>
+      <span class="mono">Panadería La Espiga</span>
+      <span class="pg">Folio 014 · Octubre 2026</span>
+    </div>
+    <div class="grid">
+      <div class="cell"><div class="lbl">Ingresos</div><div class="val">48.320 <small>Bs</small></div><div class="st"><b>+12%</b> vs sep · ≈ USD 6.980</div></div>
+      <div class="cell"><div class="lbl">Costos</div><div class="val">31.150 <small>Bs</small></div><div class="st"><b>+8%</b> harina</div></div>
+      <div class="cell"><div class="lbl">Ganancia</div><div class="val">17.170 <small>Bs</small></div><div class="st">tasa 6,92 Bs/USD</div></div>
+      <div class="cell"><div class="lbl">Margen</div><div class="val">35,5<small>%</small></div><div class="st"><b>+2,1 pts</b></div></div>
+    </div>
+    <div class="cols">
+      <div>
+        <h2>Ingresos · 30 días</h2>
+        <div class="chart">
+          <svg width="100%" height="100%" viewBox="0 0 560 150" preserveAspectRatio="none">
+            <line x1="0" y1="37" x2="560" y2="37" stroke="#E4D9C2"/><line x1="0" y1="75" x2="560" y2="75" stroke="#E4D9C2"/><line x1="0" y1="112" x2="560" y2="112" stroke="#E4D9C2"/>
+            <path d="M0,128 C45,120 75,100 120,98 C165,96 195,112 240,90 C285,68 315,44 360,48 C405,52 435,78 480,52 C525,26 545,24 560,22" fill="none" stroke="#1E1B16" stroke-width="2"/>
+            <path d="M0,128 C45,120 75,100 120,98 C165,96 195,112 240,90 C285,68 315,44 360,48 C405,52 435,78 480,52 C525,26 545,24 560,22 L560,150 L0,150 Z" fill="#E8A03C" opacity=".22"/>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <h2>Partes del mes</h2>
+        <table>
+          <tr><th>Producto</th><th class="r">Ingresos</th><th class="r">Estado</th></tr>
+          <tr><td>Pan francés</td><td class="r">12.630</td><td class="r"><span class="stamp g">SELLADO</span></td></tr>
+          <tr><td>Alfajor</td><td class="r">8.720</td><td class="r"><span class="stamp g">SELLADO</span></td></tr>
+          <tr><td>Croissant</td><td class="r">7.380</td><td class="r"><span class="stamp a">REVISAR</span></td></tr>
+          <tr><td>Torta 1/2</td><td class="r">6.240</td><td class="r"><span class="stamp g">SELLADO</span></td></tr>
+        </table>
+        <div class="errata"><b>NOTA</b><span>Harina 0000: quedan 12 kg (mínimo 25 kg). Reponer antes del sábado.</span></div>
+      </div>
+    </div>
+    <div class="foot"><span>InventarioSIS · Documento operativo</span><span>Tasa 1 USD = 6,92 Bs</span><span>Página 1 / 1</span></div>
+  </div>
+</body>
+</html>

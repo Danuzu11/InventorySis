@@ -1,0 +1,123 @@
+{
+  "title": "Elegir el mundo visual de InventarioSIS",
+  "question": "El roll asignó «Masa Viva» (curvas de fermentación). ¿Lo conservás, tomás una alternativa, o re-rollás?",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Masa Viva",
+      "kicker": "THE ROLL",
+      "lineage": "etapas de producción de panadería: amasado, fermentación, horneado, venta",
+      "thesis": "El negocio se lee como una producción: cada KPI es una etapa con su tiempo, y toda serie temporal es una curva que sube como masa.",
+      "palette": ["#F6EFE3", "#F2C9C2", "#C9D9C5", "#4A3B32", "#E8A87C"],
+      "materials": ["masa", "harina", "bandejas", "sellos de tiempo"],
+      "viewport": "Shell con pestañas, fila de KPIs-etapa (ingresos/costos/ganancia/margen en Bs y USD), y la curva de fermentación de 30 días como protagonista, con tabla de top productos y alerta de stock.",
+      "risk": "La metáfora de producción tapa la lectura si cada tarjeta se vuelve una ilustración en vez de un dato.",
+      "raised": [
+        { "from": "especimen tipográfico", "raise": "Cifras KPI a escala monumental: la jerarquía la hace el tamaño del número, no el adorno." },
+        { "from": "manual acetate", "raise": "Navegación de secciones como pestañas con un color propio por etapa del negocio." },
+        { "from": "señalización de terminal", "raise": "Una sola verdad por banda: cada tarjeta KPI dice un número y una acción." },
+        { "from": "mostrador cálido", "raise": "Color saturado solo donde se puede actuar; el resto, pastel silencioso." },
+        { "from": "mapa de orientación", "raise": "Capa de datos crudos intacta (el Sheet del cliente) debajo; la capa de IA nunca edita el terreno." }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "Talonario de Pedidos",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "talonarios triplicados con papel carbón y sellos de goma de toda panadería",
+      "thesis": "Cada movimiento del negocio es un comprobante numerado: filas tipo talón, estados sellados (VENDIDO / REVISAR), y el total del día tras una línea de corte.",
+      "palette": ["#FAF7F2", "#F3E8EA", "#2B2A28", "#5B8C6A", "#B07A1E"],
+      "materials": ["papel de talonario", "papel carbón rosa", "sellos de goma", "línea de corte punteada"],
+      "viewport": "Pad completo con perforación al costado, KPIs al pie del encabezado, tabla de talones numerados con sellos de estado, total del día y nota al pie.",
+      "risk": "El más fiel al mundo real de la panadería; el más lejano si el cliente espera «una app moderna».",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-warm",
+      "label": "Mostrador Cálido",
+      "verdict": "wins",
+      "lineage": "canon de apps de consumo: suelo cálido, tarjetas suaves, un color de acción",
+      "thesis": "Todo tiene radio suave, los textos suenan a persona, y el único color saturado en pantalla es algo que se puede pressionar.",
+      "palette": ["#FDF3EC", "#FFFFFF", "#E56B5D", "#3B2F2A", "#EAF3EC"],
+      "materials": ["tarjetas flotantes", "sombra mínima", "radio generoso"],
+      "viewport": "Saludo personal, 4 tarjetas KPI, gráfico de área coral y lista de top productos con alerta de stock y botón de acción.",
+      "risk": "Es donde aterriza la mayoría de las corridas: familiar y efectivo, pero el más previsible de la mesa.",
+      "case": "Gana en ambos ejes: identificación máxima para dueños no técnicos (usan apps de consumo a diario) y claridad de producto imbatible.",
+      "html": ".impeccable/mocks/decision/challenger-warm.html"
+    },
+    {
+      "id": "challenger-acetate",
+      "label": "Manual Acetate",
+      "verdict": "competitive",
+      "lineage": "manuales de software en caja con separadores de colores y hojas de acetato",
+      "thesis": "El negocio como manual operativo: un riel de pestañas escalonadas al canto, una hoja clara por sección, y estados marcados con perforaciones.",
+      "palette": ["#E8A03C", "#F7F1E3", "#1E1B16", "#C9BBA0", "#4A7A4E"],
+      "materials": ["acetato lechoso", "tablero de un color por sección", "perforaciones", "tipografía máquina"],
+      "viewport": "Riel de pestañas vertical (Resumen, Ventas, Compras…), hoja clara con dos perforaciones, tabla de partes con estados sellados y nota de errata para el stock.",
+      "risk": "Puede leerse institucional si el tablero ámbar no se usa con valentía.",
+      "case": "Gana claridad: la estructura de pestañas por sección es la más fuerte de la mesa. Pierde identificación: el dueño de una panadería no vive en manuales de software.",
+      "html": ".impeccable/mocks/decision/challenger-acetate.html"
+    },
+    {
+      "id": "challenger-airport",
+      "label": "Señalización de Terminal",
+      "verdict": "competitive",
+      "lineage": "sistema de señalización amarillo de aeropuerto (Schiphol)",
+      "thesis": "Una verdad por banda colgante: número monumental a la derecha, mensaje de decisión a la izquierda, flecha al borde.",
+      "palette": ["#FFD200", "#111111", "#F4F4F2", "#FFFFFF", "#C0392B"],
+      "materials": ["paneles amarillos saturados", "pictogramas blancos sobre negro", "bandas enmarcadas"],
+      "viewport": "Banda superior de ingresos con número monumental Bs 48.320, par de bandas de costos/ganancia, paneles de ranking e ingresos, y banda negra de alerta de stock.",
+      "risk": "El amarillo a todo volumen puede cansar en uso diario si no dosificás bien las bandas.",
+      "case": "Gana claridad (una sola verdad por banda, lectura a metros). Pierde identificación: aeropuerto no es el mundo de una panadería, aunque la lectura es universal.",
+      "html": ".impeccable/mocks/decision/challenger-airport.html"
+    },
+    {
+      "id": "challenger-specimen",
+      "label": "Especimen Tipográfico",
+      "verdict": "declined",
+      "lineage": "espécimenes de fundiciones tipográficas",
+      "thesis": "Una letra gigante y una grilla de glifos: la jerarquía la carga solo la escala tipográfica.",
+      "palette": ["#FAFAF8", "#111111", "#E8452C"],
+      "materials": ["papel de imprenta", "tinta plana"],
+      "viewport": "Cifras monumentales sobre papel casi blanco con etiquetas mono diminutas.",
+      "risk": "Mundo de diseñadores: el dueño de la panadería no se identifica.",
+      "kept": "Jerarquía por contraste de escala puro — ya donada a Masa Viva: los KPI van a tamaño monumental."
+    },
+    {
+      "id": "challenger-streaming",
+      "label": "Muro de Estantería",
+      "verdict": "declined",
+      "lineage": "muros de catálogo tipo streaming (filas de pósters)",
+      "thesis": "Filas horizontales donde el tile activo se expande y el resto se atenúa.",
+      "palette": ["#17171C", "#FFFFFF", "#E4B840"],
+      "materials": ["arte a sangre", "foco con atenuación"],
+      "viewport": "Filas de productos como posters que se expanden al foco.",
+      "risk": "Bonito, pero una estantería de posters no organiza finanzas.",
+      "kept": "Atenuación del resto cuando algo tiene foco — idea aplicable a tablas de productos."
+    },
+    {
+      "id": "challenger-orienteering",
+      "label": "Mapa de Orientación",
+      "verdict": "declined",
+      "lineage": "mapas ISO de orientación con curso en violeta",
+      "thesis": "Terreno fijo de colores ISO debajo; la capa de curso (acción) nunca toca el terreno (datos).",
+      "palette": ["#FFFFFF", "#D9C9A3", "#7B4FA0", "#5B7B4A", "#3B6EA5"],
+      "materials": ["curvas de nivel", "símbolos ISO"],
+      "viewport": "Mapa de terreno con curso activo superpuesto.",
+      "risk": "El orientación no es vida cotidiana en LatAm: identificación baja.",
+      "kept": "Capa de curso sobre terreno fijo — ya donada: el Sheet del cliente es terreno intacto, la IA es la capa de curso."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de la categoría",
+    "thesis": "Lo que esta categoría suele shippingear, ejecutado impecablemente.",
+    "palette": ["#FFFFFF", "#111827", "#2563EB"],
+    "materials": ["grilla limpia", "acento azul SaaS"],
+    "viewport": "El arreglo que un visitante espera: sidebar, tarjetas, azul corporativo.",
+    "risk": "Indistinguible de la competencia por diseño."
+  },
+  "buildPath": { "value": "code", "toggle": false }
+}

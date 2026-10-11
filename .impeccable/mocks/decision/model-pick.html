@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Talonario de Pedidos — InventarioSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1440px;height:900px;overflow:hidden;background:#EDE6DA;color:#2B2A28;font-family:'Archivo',sans-serif;display:flex}
+  .perf{width:34px;background:repeating-linear-gradient(to bottom,#EDE6DA 0 14px,#D6CCBC 14px 16px)}
+  .pad{flex:1;background:#FAF7F2;margin:20px 20px 20px 0;box-shadow:0 2px 14px rgba(60,45,30,.12);display:flex;flex-direction:column}
+  .padhead{display:flex;align-items:center;gap:16px;padding:18px 34px;border-bottom:2.5px dashed #C9BFAE}
+  .brand{font-weight:800;font-size:18px;letter-spacing:-.3px}
+  .brand span{text-decoration:underline;text-decoration-style:wavy;text-underline-offset:4px}
+  .meta{font-family:'Special Elite',monospace;font-size:12.5px;color:#6E675C}
+  .stampdate{margin-left:auto;font-family:'Special Elite',monospace;font-size:13px;border:2px solid #5B8C6A;color:#5B8C6A;padding:6px 12px;transform:rotate(-2deg);letter-spacing:.06em}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:2.5px dashed #C9BFAE}
+  .kpi{padding:16px 34px;border-right:1px dashed #C9BFAE}
+  .kpi:last-child{border-right:0}
+  .kpi .lbl{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.08em;color:#6E675C;text-transform:uppercase}
+  .kpi .val{font-size:32px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums;line-height:1.05;margin-top:3px}
+  .kpi .val small{font-size:13px;color:#6E675C;font-weight:600}
+  .kpi .note{font-size:11.5px;color:#6E675C;margin-top:3px}
+  .kpi .note b{color:#5B8C6A}
+  .tickets{flex:1;padding:14px 34px;overflow:hidden}
+  .thead,.trow{display:grid;grid-template-columns:64px 1fr 90px 110px 120px 130px;align-items:center;gap:10px}
+  .thead{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.1em;color:#6E675C;text-transform:uppercase;padding-bottom:8px;border-bottom:1px solid #DED5C6}
+  .trow{padding:11px 6px;border-bottom:1px solid #EDE5D6;font-size:13.5px}
+  .trow:nth-child(odd){background:#F3E8EA}
+  .trow .no{font-family:'Special Elite',monospace;font-weight:400;font-size:14px;color:#8A8175}
+  .trow .prod{font-weight:600}
+  .trow .num{font-variant-numeric:tabular-nums;text-align:right}
+  .sello{justify-self:end;font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:.08em;border:2px solid;padding:3px 9px;transform:rotate(-1.5deg)}
+  .sello.v{border-color:#5B8C6A;color:#5B8C6A}
+  .sello.p{border-color:#B07A1E;color:#B07A1E}
+  .sello.r{border-color:#B85C4A;color:#B85C4A}
+  .tear{margin:0 34px;border-top:2.5px dashed #C9BFAE;display:flex;align-items:center;padding:14px 0 18px;gap:20px}
+  .tear .lbl{font-family:'Special Elite',monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6E675C}
+  .tear .total{margin-left:auto;font-size:34px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+  .tear .total small{font-size:14px;color:#6E675C}
+  .alerta{margin:0 34px 18px;background:#FBEFE4;border:1.5px dashed #C98B4A;padding:11px 14px;display:flex;gap:10px;align-items:center;font-size:13px}
+  .alerta b{font-family:'Special Elite',monospace;font-size:11px;letter-spacing:.08em;color:#B07A1E}
+  .navstub{width:70px;background:#E2D9CB;display:flex;flex-direction:column;padding-top:24px;gap:2px}
+  .stub{writing-mode:vertical-rl;transform:rotate(180deg);padding:16px 0;font-family:'Special Elite',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#8A8175;text-align:center}
+  .stub.on{background:#FAF7F2;color:#2B2A28;box-shadow:-2px 0 6px rgba(60,45,30,.08)}
+</style>
+</head>
+<body>
+  <div class="perf"></div>
+  <div class="pad">
+    <div class="padhead">
+      <div class="brand">Inventario<span>SIS</span></div>
+      <div class="meta">Panadería La Espiga · Talón de cierre diario</div>
+      <div class="stampdate">30 OCT 2026</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="lbl">Ingresos octubre</div><div class="val">48.320 <small>Bs</small></div><div class="note"><b>▲ 12%</b> · ≈ USD 6.980</div></div>
+      <div class="kpi"><div class="lbl">Costos</div><div class="val">31.150 <small>Bs</small></div><div class="note">harina +8% este mes</div></div>
+      <div class="kpi"><div class="lbl">Ganancia neta</div><div class="val">17.170 <small>Bs</small></div><div class="note">tasa 6,92 Bs/USD</div></div>
+      <div class="kpi"><div class="lbl">Margen</div><div class="val">35,5<small>%</small></div><div class="note"><b>▲ 2,1 pts</b> vs septiembre</div></div>
+    </div>
+    <div class="tickets">
+      <div class="thead"><span>Talón</span><span>Producto</span><span class="num">Unid.</span><span class="num">Ingresos</span><span class="num">Tendencia</span><span style="text-align:right">Estado</span></div>
+      <div class="trow"><span class="no">#0148</span><span class="prod">Pan francés</span><span class="num">8.420</span><span class="num">Bs 12.630</span><span class="num" style="color:#5B8C6A;font-weight:700">▲ 9%</span><span class="sello v">VENDIDO</span></div>
+      <div class="trow"><span class="no">#0147</span><span class="prod">Alfajor de maicena</span><span class="num">2.180</span><span class="num">Bs 8.720</span><span class="num" style="color:#5B8C6A;font-weight:700">▲ 15%</span><span class="sello v">VENDIDO</span></div>
+      <div class="trow"><span class="no">#0146</span><span class="prod">Croissant de mantequilla</span><span class="num">1.640</span><span class="num">Bs 7.380</span><span class="num" style="color:#5B8C6A;font-weight:700">▲ 4%</span><span class="sello p">REVISAR</span></div>
+      <div class="trow"><span class="no">#0145</span><span class="prod">Torta de chocolate 1/2</span><span class="num">312</span><span class="num">Bs 6.240</span><span class="num" style="color:#5B8C6A;font-weight:700">▲ 2%</span><span class="sello v">VENDIDO</span></div>
+      <div class="trow"><span class="no">#0144</span><span class="prod">Medialuna de grasa</span><span class="num">3.010</span><span class="num">Bs 4.515</span><span class="num" style="color:#B85C4A;font-weight:700">▼ 6%</span><span class="sello r">BAJÓ</span></div>
+    </div>
+    <div class="tear"><span class="lbl">Total del día · 42 pedidos</span><div class="total">Bs 4.850 <small>≈ USD 701</small></div></div>
+    <div class="alerta"><b>NOTA AL PIE</b><span>Harina 0000: quedan 12 kg (mínimo 25 kg). Reponer antes del sábado — el croissant depende de ella.</span></div>
+  </div>
+  <div class="navstub">
+    <div class="stub on">Cierre</div>
+    <div class="stub">Subir Excel</div>
+    <div class="stub">Análisis IA</div>
+    <div class="stub">Inventario</div>
+    <div class="stub">Config</div>
+  </div>
+</body>
+</html>
